@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block body %}
+
+<form  method="post" enctype="multipart/form-data"style="text-align:center;">
+    {% csrf_token %}
+    <h1>ADD Movie Details</h1><br>
+
+    <input type="text" name="movie_name" placeholder="Enter Movie Name"><br><br>
+    <input type="text" name="movie_desc" placeholder="Enter Description"><br><br>
+    <input type="text" name="year" placeholder="Enter Year"><br><br>
+    <input type="text" name="Ticket_price" placeholder="Enter Ticket Price"><br><br>
+    <input type="file" name="img" placeholder="Enter image"><br><br>
+    <input type="submit"class="btn btn-success btn-lg" value="ADD">
+    <a class="btn btn-warning btn-lg"  href="{% url 'movie_app:index'  %}">Cancel</a>
+
+</form>
+{% endblock %}
